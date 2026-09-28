@@ -1,0 +1,16 @@
+{
+  "name": "roblox-game",
+  "version": "1.0.0",
+  "description": "Roblox game project with Rojo",
+  "scripts": {
+    "dev": "rojo serve",
+    "build": "rojo build -o game.rbxl"
+  },
+  "keywords": [
+    "roblox",
+    "rojo",
+    "game"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
