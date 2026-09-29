@@ -1,16 +1,16 @@
 {
-  "name": "roblox-game",
-  "version": "1.0.0",
-  "description": "Roblox game project with Rojo",
+  "name": "world-chase-tag",
+  "version": "0.1.0",
+  "description": "World Chase Tag - Roblox game synced with Rojo",
   "scripts": {
     "dev": "rojo serve",
-    "build": "rojo build -o game.rbxl"
+    "build": "rojo build -o WorldChaseTag.rbxl",
+    "test:sim": "python3 tests/sim/bundle.py && luau tests/sim/run.luau"
   },
   "keywords": [
     "roblox",
     "rojo",
     "game"
   ],
-  "author": "Your Name",
   "license": "MIT"
 }
