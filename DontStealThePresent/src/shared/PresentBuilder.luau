@@ -903,7 +903,10 @@ function Shapes.Infinite(ctx: Ctx): number
 		local w = s * f
 		local gap = s * 0.06
 		local hub = spinHub(ctx, CF(0, y + w / 2, 0), if i % 2 == 0 then -1.2 else 1.2, V3(0, 1, 0))
-		add(ctx, { Size = V3(w, w, w), CF = CF(), Color = colors[i], Role = "Body", Hub = hub, Reflectance = 0.1 })
+		local cube = add(ctx, { Size = V3(w, w, w), CF = CF(), Color = colors[i], Role = "Body", Hub = hub, Reflectance = 0.1 })
+		-- el Regalo Infinito siempre cambia de color
+		cube:AddTag("Rainbow")
+		cube:SetAttribute("HueOffset", i * 0.22)
 		local rw = w * 0.2
 		add(ctx, { Size = V3(w + 0.04, w + 0.04, rw), CF = CF(), Color = WHITE, Material = Enum.Material.Neon, Role = "Ribbon", Hub = hub })
 		add(ctx, { Size = V3(rw, w + 0.04, w + 0.04), CF = CF(), Color = WHITE, Material = Enum.Material.Neon, Role = "Ribbon", Hub = hub })

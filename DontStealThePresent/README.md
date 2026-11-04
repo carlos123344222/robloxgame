@@ -3,7 +3,7 @@
 Juego navideño para Roblox del género "roba y protege": compra regalos que salen de la Fábrica de Santa,
 llévalos a tu taller para que generen dinero, **roba los regalos de los demás** y protege los tuyos.
 
-![Miniatura](art/thumbnail_1.png)
+![Miniatura](art/thumbnail_1.jpg)
 
 Todo el juego está hecho con código (Rojo + Luau): el mapa, los 28 regalos, los talleres, los gears y la
 interfaz se construyen con piezas, sin mallas ni imágenes que haya que subir. Por eso funciona nada más
@@ -115,7 +115,7 @@ Si te roban, salta una **alarma roja** en pantalla con el nombre del ladrón.
 Los legendarios o mejores salen con un **pilar de luz** y se anuncian a todo el servidor. Durante la Noche de Santa los
 secretos son unas 27 veces más probables.
 
-![Regalos](art/presents.png)
+![Regalos](art/presents.jpg)
 
 ## Ajustar el juego
 

@@ -137,7 +137,7 @@ elseif mode == "shelf" then
 		local height = model:GetAttribute("Height")
 		local scale = math.min(1, 6.5 / height)
 		model:Destroy()
-		placePresent(folder, info.Id, nil, CF.new(col * 9, -row * 11 - 4, 0) * CF.Angles(0, 0.55, 0), scale)
+		placePresent(folder, info.Id, nil, CF.new(col * 9, -row * 11 - 4, 0) * CF.Angles(0, math.pi + 0.55, 0), scale)
 		-- peana
 		local base = roblox.Instance.new("Part")
 		base.Shape = roblox.Enum.PartType.Cylinder

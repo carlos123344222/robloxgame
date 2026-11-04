@@ -114,14 +114,11 @@ def make_thumb(render_path, out_path, subtitle):
     img = Image.open(render_path).convert("RGBA")
     w, h = img.size
     # viñeta suave
-    vignette = Image.new("L", img.size, 0)
-    vd = ImageDraw.Draw(vignette)
-    for i in range(60):
-        a = int(150 * (i / 60) ** 2)
-        inset = int(i * w / 120)
-        vd.rectangle([inset, inset, w - inset, h - inset], outline=255 - a)
-    dark = Image.new("RGBA", img.size, (0, 0, 20, 255))
-    img = Image.composite(img, dark, vignette.filter(ImageFilter.GaussianBlur(40)))
+    mask = Image.new("L", img.size, 0)
+    ImageDraw.Draw(mask).ellipse([-w * 0.18, -h * 0.3, w * 1.18, h * 1.3], fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(min(w, h) * 0.12))
+    darkened = Image.blend(img, Image.new("RGBA", img.size, (0, 0, 20, 255)), 0.6)
+    img = Image.composite(img, darkened, mask)
     band = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ImageDraw.Draw(band).rectangle([0, 0, w, int(h * 0.27)], fill=(10, 8, 30, 120))
     img = Image.alpha_composite(img, band.filter(ImageFilter.GaussianBlur(30)))
