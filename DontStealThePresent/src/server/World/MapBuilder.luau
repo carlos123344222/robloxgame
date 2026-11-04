@@ -361,20 +361,24 @@ local function buildGiantTree(map: Instance)
 	for i = 0, tiers - 1 do
 		local t = i / (tiers - 1)
 		local d = 46 * (1 - t) + 5
-		Build.Cylinder(model, tierH * 0.75, d, base * CF(0, y + tierH * 0.4, 0), {
-			Color = if i % 2 == 0 then rgb(26, 104, 60) else rgb(20, 86, 50),
-			Material = Enum.Material.Grass,
-		})
-		Build.Cylinder(model, 0.7, d * 0.9, base * CF(0, y + tierH * 0.82, 0), { Color = SNOW, Material = Enum.Material.Snow, CanCollide = false })
+		local green = if i % 2 == 0 then rgb(26, 104, 60) else rgb(20, 86, 50)
+		-- cada piso son tres discos cada vez más estrechos: silueta de cono
+		for k = 0, 2 do
+			Build.Cylinder(model, tierH * 0.36, d * (1 - k * 0.16), base * CF(0, y + tierH * (0.18 + k * 0.3), 0), {
+				Color = green,
+				Material = Enum.Material.Grass,
+			})
+		end
+		Build.Cylinder(model, 0.6, d * 0.97, base * CF(0, y + tierH * 0.3, 0), { Color = SNOW, Material = Enum.Material.Snow, CanCollide = false })
 		-- bolas de adorno
 		local count = math.max(4, math.floor(d / 4))
 		for k = 0, count - 1 do
 			local a = k * 2 * math.pi / count + i * 0.5
 			local colors = { RED, GOLD, rgb(70, 150, 255), rgb(200, 90, 255), WHITE }
-			Build.Ball(model, 1.6, base * CF(math.cos(a) * d * 0.5, y + tierH * 0.2, math.sin(a) * d * 0.5), {
+			Build.Ball(model, 1.7, base * CF(math.cos(a) * d * 0.5, y + tierH * 0.12, math.sin(a) * d * 0.5), {
 				Color = colors[(k + i) % #colors + 1],
-				Material = Enum.Material.Glass,
-				Reflectance = 0.3,
+				Material = Enum.Material.SmoothPlastic,
+				Reflectance = 0.25,
 				CanCollide = false,
 				CastShadow = false,
 			})

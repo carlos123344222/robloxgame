@@ -5,7 +5,7 @@ local GameConfig = require(game:GetService("ReplicatedStorage").Shared.Config.Ga
 
 local Layout = {}
 
-Layout.Version = 3
+Layout.Version = 4
 
 Layout.Base = {
 	Width = 56, -- eje X local

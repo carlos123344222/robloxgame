@@ -259,7 +259,7 @@ function BaseBuilder.Build(parent: Instance, index: number): Model
 			Material = Enum.Material.Marble,
 			Name = "Pedestal",
 		})
-		Build.Cylinder(slot, 0.16, 5.2, pcf * CF(0, 2.22, 0), { Color = GOLD, Material = Enum.Material.Metal, Name = "Rim", CanCollide = false })
+		Build.Cylinder(slot, 0.22, 5.12, pcf * CF(0, 1.95, 0), { Color = GOLD, Material = Enum.Material.Metal, Name = "Rim", CanCollide = false })
 		local padCF = cf * CF(pad)
 		Build.Part(slot, {
 			Size = V3(3.4, 0.3, 3.4),
