@@ -1,0 +1,53 @@
+{
+  "name": "DontStealThePresent",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$properties": {
+        "CharacterUseJumpPower": false,
+        "CharacterJumpHeight": 7.5,
+        "CharacterWalkSpeed": 18,
+        "CameraMaxZoomDistance": 90
+      },
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$properties": {
+        "StreamingEnabled": false,
+        "Gravity": 196.2
+      }
+    },
+    "Lighting": {
+      "$className": "Lighting",
+      "$properties": {
+        "TimeOfDay": "20:36:00",
+        "Brightness": 2.2,
+        "Ambient": [0.36, 0.4, 0.55],
+        "OutdoorAmbient": [0.5, 0.55, 0.72],
+        "GlobalShadows": true
+      }
+    },
+    "SoundService": {
+      "$className": "SoundService"
+    }
+  }
+}

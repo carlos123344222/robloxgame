@@ -1,3 +1,14 @@
+# Juegos de Roblox
+
+Este repositorio contiene dos proyectos de Roblox sincronizados con [Rojo](https://rojo.space/):
+
+| Proyecto | Carpeta | Qué es |
+| --- | --- | --- |
+| 🎁 **Don't Steal the Present** | [`DontStealThePresent/`](DontStealThePresent/README.md) | Juego navideño de comprar, robar y proteger regalos. Listo para jugar: abre `DontStealThePresent/DontStealThePresent.rbxl` en Studio. |
+| 🏃 World Chase Tag | raíz del repositorio (`src/`) | Sistema de movimiento (parkour) para un juego de persecución. Se describe abajo. |
+
+---
+
 # World Chase Tag
 
 Juego de persecución (tag) para Roblox con combate contra jugadores y NPCs. Esta primera fase es el
